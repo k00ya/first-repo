@@ -1,9 +1,10 @@
 body {
   font-family: 'Courier New', Courier, monospace;
-  background-color: #b1c3cc;
+  background: linear-gradient(to bottom, rgb(31, 145, 116), rgb(56, 145, 96), rgb(31, 145, 116));
   margin: 0;
   padding: 0;
 }
+
 
 h1 {
   text-align: center;
@@ -71,3 +72,4 @@ h1 {
 .header-kwekwek:hover { 
   transform: scale(1.05); 
 }
+
