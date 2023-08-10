@@ -1,6 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #b1c3cc;
   margin: 0;
   padding: 0;
 }
@@ -44,14 +44,30 @@ h1 {
 .header-balut {
   background-color: red;
   color: white;
+  transition: transform 0.2s ease-in-out; /* Add transition for smooth effect */
 }
 
 .header-isaw {
   background-color: green;
   color: white;
+  transition: transform 0.2s ease-in-out; 
 }
 
 .header-kwekwek {
   background-color: gold;
   color: black;
+  transition: transform 0.2s ease-in-out;
+}
+
+
+.header-balut:hover {
+  transform: scale(1.05); /* Slight scale-up effect on hover */
+}
+
+.header-isaw:hover {
+  transform: scale(1.05); 
+}
+
+.header-kwekwek:hover { 
+  transform: scale(1.05); 
 }
