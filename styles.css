@@ -1,5 +1,5 @@
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Apple Chancery', cursive; /* If 'Apple Chancery' isn't available, use the default cursive font */
   background: linear-gradient(to bottom, rgb(31, 145, 116), rgb(56, 145, 96), rgb(31, 145, 116));
   margin: 0;
   padding: 0;
@@ -25,7 +25,7 @@ h1 {
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around; /* Adjusts space equally around items */
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -35,28 +35,29 @@ h1 {
 .header-balut,
 .header-isaw,
 .header-kwekwek {
-  display: inline-block;
+  display: flex; /* Changes to flex to align items horizontally */
+  align-items: center; /* Centers text and image vertically */
   padding: 10px 20px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
+  justify-content: center;
 }
 
 .header-balut {
-  background-color: red;
-  color: white;
-  transition: transform 0.2s ease-in-out; /* Add transition for smooth effect */
+  background: radial-gradient(circle, red, white);
+  color: black; /* Adjust text color if needed */
+  transition: transform 0.2s ease-in-out;
 }
 
 .header-isaw {
-  background-color: green;
-  color: white;
-  transition: transform 0.2s ease-in-out; 
+  background: radial-gradient(circle, green, white);
+  color: black; /* Adjust text color if needed */
+  transition: transform 0.2s ease-in-out;
 }
 
 .header-kwekwek {
-  background-color: gold;
-  color: black;
+  background: radial-gradient(circle, gold, white);
   transition: transform 0.2s ease-in-out;
 }
 
@@ -66,10 +67,56 @@ h1 {
 }
 
 .header-isaw:hover {
-  transform: scale(1.05); 
+  animation: bounce 0.5s ease-in-out infinite; /* Apply the bounce animation and loop it infinitely */
 }
+
+
 
 .header-kwekwek:hover { 
   transform: scale(1.05); 
 }
+
+.header-balut img,
+.header-isaw img,
+.header-kwekwek img {
+  width: 100px; /* or whatever size you want */
+  height: auto; /* this keeps the aspect ratio */
+  margin-right: 10px; /* adds some space between the image and the text */
+}
+
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+  background: url('recipes/feel.gif') no-repeat center; /* Path to your flame flare image */
+  background-size: contain; /* You can adjust this based on your image and layout */
+}
+
+h1 {
+  /* Other styles */
+  color: rgb(0, 0, 0); /* Or any color that works with your flame flare image */
+  /* Add more styling as needed */
+}
+
+.header-balut span,
+.header-isaw span,
+.header-kwekwek span {
+  font-size: 16px; /* Adjust as needed */
+  margin-left: 10px; /* Add some space between the image and the text */
+}
+
+
 

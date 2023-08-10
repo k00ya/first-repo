@@ -11,9 +11,23 @@
         <img src="./recipes/jollibee.gif" class="centered-gif" alt="Picture of balut meaning dead duck">
     </div>
     <div class="header-container">
-        <a href="recipes/balut.html" class="header-balut">balut</a>
-        <a href="recipes/isaw.html" class="header-isaw">isaw</a>
-        <a href="recipes/kwekwek.html" class="header-kwekwek">kwekwek</a>
+        <a href="recipes/balut.html" class="header-balut" onmouseover="playAudio()" onmouseout="stopAudio()">
+            <img src="recipes/baa.jpg" alt="Balut Image">
+            <span>Balut</span> <!-- Add the name here -->
+          </a>
+        <a href="recipes/isaw.html" class="header-isaw" onmouseover="playbiboAudio()" onmouseout="stopbiboAudio()">
+            <img src="recipes/isaww.jpg" alt="Isaw Image">
+            <span>Isaw</span>
+        </a>        
+        <a href="recipes/kwekwek.html" class="header-kwekwek">
+            <img src="recipes/kwik.jpg" alt="Kwekwek Image">
+            <span>Kwekwek</span>
+        </a>
     </div>
+    <audio id="phil" src="audio/phil.mp3"></audio> <!-- Adding audio element -->
+    <audio id="bibo" src="audio/bibo.mp3"></audio>
+    <script src="scripts.js"></script> <!-- Link to external JavaScript file -->
+
+
 </body>
 </html>
