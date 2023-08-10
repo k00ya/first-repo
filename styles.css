@@ -1,3 +1,11 @@
 .special-header {
-  color: red;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.special-header:hover {
+  background-color: red;
 }
