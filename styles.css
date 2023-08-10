@@ -1,11 +1,57 @@
-.special-header {
-  background-color: red;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  text-decoration: none;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
 }
 
-.special-header:hover {
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.gif-container {
+  display: flex;
+  justify-content: center; /* Center the GIF horizontally */
+  align-items: center; /* Center the GIF vertically */
+  margin-top: 20px;
+}
+
+.centered-gif {
+  max-width: 100%;
+  height: auto;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.header-balut,
+.header-isaw,
+.header-kwekwek {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header-balut {
   background-color: red;
+  color: white;
+}
+
+.header-isaw {
+  background-color: green;
+  color: white;
+}
+
+.header-kwekwek {
+  background-color: gold;
+  color: black;
 }
