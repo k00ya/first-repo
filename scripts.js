@@ -13,14 +13,17 @@ function toggleAudio(audioId, play) {
   var isawHeader = document.querySelector('.header-isaw');
   var isawGif = document.querySelector('.isaw-gif');
   
+  isawGif.style.opacity = '0'; // Set initial opacity to 0
+  
   isawHeader.addEventListener('mouseover', function() {
     toggleAudio('bibo', true);
-    isawGif.style.opacity = '1';
+    isawGif.style.opacity = '1'; // Sets opacity to 1 when hovered
+    isawGif.style.transition = 'opacity 0.5s ease'; // Adds a smooth transition effect
   });
   
   isawHeader.addEventListener('mouseout', function() {
     toggleAudio('bibo', false);
-    isawGif.style.opacity = '0';
+    isawGif.style.opacity = '0'; // Sets opacity back to 0 when not hovered
   });
   
   balutHeader.addEventListener('mouseover', function() {
@@ -30,6 +33,7 @@ function toggleAudio(audioId, play) {
   balutHeader.addEventListener('mouseout', function() {
     toggleAudio('eyes', false);
   });
+  
   
   
   
