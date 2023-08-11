@@ -1,6 +1,7 @@
 function toggleAudio(audioId, play) {
     var audio = document.getElementById(audioId);
     if (play) {
+      audio.volume = 0.3; // You can change this value to whatever you prefer
       audio.play();
     } else {
       audio.pause();
@@ -23,11 +24,11 @@ function toggleAudio(audioId, play) {
   });
   
   balutHeader.addEventListener('mouseover', function() {
-    toggleAudio('phil', true);
+    toggleAudio('eyes', true);
   });
   
   balutHeader.addEventListener('mouseout', function() {
-    toggleAudio('phil', false);
+    toggleAudio('eyes', false);
   });
   
   
