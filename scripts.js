@@ -1,32 +1,38 @@
-function playAudio() {
-    var audio = document.getElementById("phil");
-    audio.play();
+function toggleAudio(audioId, play) {
+    var audio = document.getElementById(audioId);
+    if (play) {
+      audio.play();
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+    }
   }
   
-  function stopAudio() {
-    var audio = document.getElementById("phil");
-    audio.pause();
-    audio.currentTime = 0; // This line resets the audio to the beginning
-  }
+  var balutHeader = document.querySelector('.header-balut');
+  var isawHeader = document.querySelector('.header-isaw');
+  var isawGif = document.querySelector('.isaw-gif');
   
-  function playbiboAudio() {
-    var audio = document.getElementById("bibo");
-    audio.play();
-  }
+  isawHeader.addEventListener('mouseover', function() {
+    toggleAudio('bibo', true);
+    isawGif.style.opacity = '1';
+  });
   
-  function stopbiboAudio() {
-    var audio = document.getElementById("bibo");
-    audio.pause();
-    audio.currentTime = 0; // Resets the audio to the beginning
-  }
+  isawHeader.addEventListener('mouseout', function() {
+    toggleAudio('bibo', false);
+    isawGif.style.opacity = '0';
+  });
   
-  var isawHeader = document.getElementById('isaw-header');
-var isawGif = document.querySelector('.isaw-gif');
-
-isawHeader.addEventListener('mouseover', function() {
-    isawGif.style.opacity = '1'; // Fade in on hover over Isaw header
-});
-
-isawHeader.addEventListener('mouseout', function() {
-    isawGif.style.opacity = '0'; // Fade out on hover out
-});
+  balutHeader.addEventListener('mouseover', function() {
+    toggleAudio('phil', true);
+  });
+  
+  balutHeader.addEventListener('mouseout', function() {
+    toggleAudio('phil', false);
+  });
+  
+  
+  
+  
+  
+  
+  
