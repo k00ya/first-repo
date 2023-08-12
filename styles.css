@@ -10,21 +10,22 @@ body {
 }
 
 .title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #0400ff;
   text-align: center;
-  margin-top: 20px; /* or any value that suits your design */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: glow 2s infinite alternate;
 }
 
-.gif-container, .centered-gif {
+.gif-container, .centered-gif, .header-container {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  height: auto;
-  margin-top: 20px;
 }
 
 .header-container {
-  display: flex;
   justify-content: space-around;
   max-width: 800px;
   margin: 0 auto;
@@ -37,47 +38,35 @@ body {
   align-items: center;
   padding: 10px 20px;
   border-radius: 10px;
-  text-decoration: palevioletred;
   font-weight: bold;
   justify-content: center;
   transition: var(--header-transition);
+  background: none;
+  border: 2px solid #000;
+  flex-direction: column; /* Stack items vertically */
+  width: 150px; /* Square shape */
+  height: 150px; /* Square shape */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .header-balut img, .header-isaw img, .header-kwekwek img {
   width: 100px;
   height: auto;
-  margin-right: 10px;
+  margin-right: 0; /* Remove right margin */
+  margin-bottom: 10px; /* Add bottom margin */
 }
-
-.header-balut { background: radial-gradient(circle, red, white); }
-.header-isaw { background: radial-gradient(circle, green, white); }
-.header-kwekwek { background: radial-gradient(circle, gold, white); }
 
 .header-balut:hover, .header-kwekwek:hover { transform: scale(1.05); }
 .header-isaw:hover { animation: bounce 0.5s ease-in-out infinite; }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-  40% { transform: translateY(-5px); }
-  60% { transform: translateY(-3px); }
-}
-
-.isaw-gif {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  position: absolute;
-  left: 0;
-}
-
-.right-gif {
+.isaw-gif, .right-gif {
   opacity: 0;
   transition: opacity 0.5s ease;
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 150px; /* You can adjust the width as needed */
 }
+
+.isaw-gif { left: 0; }
+.right-gif { right: 0; top: 50%; transform: translateY(-50%); width: 150px; }
 
 .rain {
   position: fixed;
@@ -92,11 +81,7 @@ body {
   transition: opacity 0.5s ease; /* Smooth fade-in/fade-out */
 }
 
-.rain.show {
-  opacity: 1; /* Show rain */
-}
-
-
+.rain.show { opacity: 1; /* Show rain */ }
 .drop {
   background: rgba(255, 255, 255, 0.6);
   width: 5px;
@@ -104,18 +89,10 @@ body {
   border-radius: 50%;
   position: absolute;
   bottom: 100%;
-  animation: fall 4s linear infinite; /* Increased duration to 4s for slower rain */
+  animation: fall 4s linear infinite;
 }
 
-
-@keyframes fall {
-  to {
-    transform: translateY(100vh); /* Moving the droplets from top to bottom */
-  }
-}
-
-
-
-
-
+@keyframes fall { to { transform: translateY(100vh); } }
+@keyframes glow { from { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); } to { text-shadow: 2px 2px 10px rgb(20, 150, 236); } }
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-5px); } 60% { transform: translateY(-3px); } }
 

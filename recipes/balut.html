@@ -1,37 +1,69 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-    <head>
-
+<head>
     <meta charset="UTF-8">
-    
-    </head>
-
     <title>balut recipe</title>
-
-    <body> 
-
-        <h1>balut</h1>
-
-
-        <img src="./img/baloot.jpg" style="width: 500px; height: 360px;" alt="Picture of balut meaning dead duck">
-
-        <h2>Bit of glazing</h2>
-    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #FFB6C1, #FF69B4, #FF1493);
+            color: #333;
+            overflow-x: hidden;
+        }
+        h1 { animation: slideToLeftAndFadeIn 1s forwards; }
+        h2 { animation: slideToLeftAndFadeIn 0.8s forwards; }
+        img { animation: slideToLeftAndFadeIn 1.2s forwards; }
+        ul { animation: slideToLeftAndFadeIn 0.9s forwards; }
+        a { animation: slideToLeftAndFadeIn 1.1s forwards; }
+        h1, h2 { color: #103394; }
+        img { border: 5px solid #888; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+        ul li { margin-bottom: 10px; }
+        a { text-decoration: none; color: #007bff; }
+        a:hover { text-decoration: underline; }
+        h1, h2, img, ul, a {
+            position: relative;
+            left: 50%;
+            opacity: 0;
+            animation: slideToLeftAndFadeIn 1s forwards;
+        }
+        @keyframes slideToLeftAndFadeIn {
+            from { left: 50%; opacity: 0; }
+            to { left: 0; opacity: 1; }
+        }
+        .history-container {
+            margin: 20px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Balut</h1>
+    <img src="./img/baloot.jpg" style="width: 500px; height: 360px;" alt="Picture of balut meaning dead duck">
+    <h2>Recipe</h2>
     <ul>
-        <li>this <strong>egg</strong> is very yummy and delicious because you get to put vinegar on it which is really just a <strong>bonus</strong></li>
-        <li>not appealing to look at, appealing when it comes to <strong>tasting</strong> it</li>
-        <li>rofl i forgot one more thing, you will feel the beak break in your mouth which is the least appealing occurrence during consumption</li>
-    
+        <li><strong>Ingredients:</strong> Duck eggs, water, salt</li>
+        <li><strong>Step 1:</strong> Select fertilized duck eggs that are about 16-18 days old.</li>
+        <li><strong>Step 2:</strong> Place the eggs in a pot and cover with water. Add a tablespoon of salt.</li>
+        <li><strong>Step 3:</strong> Bring to a boil and simmer for 30 minutes.</li>
+        <li><strong>Step 4:</strong> Remove from heat and let cool.</li>
+        <li><strong>Step 5:</strong> Serve with a pinch of salt, chili, and vinegar.</li>
     </ul>
-
-    
-        <a href="../index.html"><h4>Back To Main Menu</h4></a>
-
-    </body>
-
-
+    <div class="history-container">
+        <h3>History of Balut</h3>
+        <p>Balut, a popular street food in the Philippines, is a fertilized duck egg with a partially developed embryo. It's known for its unique taste and texture.</p>
+        <p>The origins of balut are unclear, but it's believed to have been introduced by Chinese traders in the Philippines centuries ago. It's become a symbol of Filipino culture and is often enjoyed with a pinch of salt and a splash of vinegar.</p>
+        <p>Though controversial for some, balut is celebrated by many as a nutritious and flavorful delicacy, often enjoyed during social gatherings.</p>
+    </div>
+    <a href="../index.html"><h4>Back To Main Menu</h4></a>
+</body>
 </html>
+
+
+
+
+
+
 
 

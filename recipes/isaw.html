@@ -1,34 +1,51 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
-    <head>
-
+<head>
     <meta charset="UTF-8">
-
     <title>isaw recipe</title>
-
-    <body> 
-
-        <h1>ISAW</h1>
-
-
-        <img src="./img/Isaww.jpg" style="width: 500px; height: 360px;" alt="Picture of intestine meaning chicken intestine">
-    
+    <style>
+        body, h2, img, ul, a {
+            font-family: Arial, sans-serif;
+            color: #333;
+            position: relative;
+            left: 50%;
+            opacity: 0;
+            animation: slideToLeftAndFadeIn 1s forwards;
+            overflow-x: hidden;
+        }
+        body { background: linear-gradient(to right, #FFD700, #FFA500, #FF8C00); }
+        h2 { color: #8B4513; }
+        img { border: 5px solid #888; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+        ul li { margin-bottom: 10px; }
+        a { text-decoration: none; color: #007bff; }
+        a:hover { text-decoration: underline; }
+        .history-container {
+            margin: 20px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+        }
+        @keyframes slideToLeftAndFadeIn {
+            from { left: 50%; opacity: 0; }
+            to { left: 0; opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h2>Isaw</h2>
+    <img src="./img/Isaww.jpg" style="width: 500px; height: 360px;" alt="Picture of intestine meaning chicken intestine">
     <ul>
-        <li>one of the <strong>top</strong> 5 shot clock buzzer beater foods of philippine homeland</li>
-        <li>highly addicting, do not get caught in its dark magic</li>
-        <li>ingredients <strong>CANNOT</strong> be disclosed due to high demand</li>
-    
+        <li><strong>Step 1:</strong> Clean the intestines thoroughly.</li>
+        <li><strong>Step 2:</strong> Boil with spices and marinade.</li>
+        <li><strong>Step 3:</strong> Skewer and grill to perfection.</li>
+        <li><strong>Step 4:</strong> Serve hot with your favorite dipping sauce.</li>
     </ul>
-
-
-
-
-        <a href="../index.html"><h4>Back To Main Menu</h4></a>
-
-
-    </body>
-
-
+    <div class="history-container">
+        <h3>History of Isaw</h3>
+        <p>Isaw, a popular street food in the Philippines, is made from skewered and grilled chicken or pork intestines. Often sold by street vendors, it's marinated, skewered, and grilled to a savory perfection. Isaw represents the creativity and resourcefulness of Filipino culinary tradition. It's often enjoyed with a cold beer or soft drink and is a staple during gatherings and celebrations.</p>
+    </div>
+    <a href="../index.html"><h4>Back To Main Menu</h4></a>
+</body>
 </html>
+
+
