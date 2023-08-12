@@ -46,6 +46,22 @@ function toggleAudio(audioId, play) {
   
   handleGifOpacity('.header-isaw', '.isaw-gif', 'bibo');
   handleGifOpacity('.header-isaw', '.right-gif', 'bibo');
+
+  function randomizeKwekwekColors() {
+    var kwekwekHeader = document.querySelector('.header-kwekwek span');
+    kwekwekHeader.addEventListener('mouseover', () => {
+      var text = kwekwekHeader.textContent;
+      var colorfulText = '';
+      for (var char of text) {
+        var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        colorfulText += `<span style="color:${randomColor}">${char}</span>`;
+      }
+      kwekwekHeader.innerHTML = colorfulText;
+    });
+  }
+  
+  randomizeKwekwekColors();
+  
   
   
   
