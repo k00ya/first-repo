@@ -1,3 +1,3 @@
 # studyy
 
-“Hello Odin!"
+“we goin up from here"
