@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 
-<html lang="en">
-
-    <head>
-
-    <meta charset="UTF-8">
-
-    <title>kwekwek recipe</title>
-
-    <body> 
-
-        <h1>kwekwek</h1>
-
-
-        <img src="./img/kweek.jpg" style="width: 500px; height: 360px;" alt="Picture of intestine meaning chicken intestine">
-    
+<style>
+    body, h2, img, ul, a {
+        font-family: Arial, sans-serif;
+        color: #333;
+        position: relative;
+        left: 50%;
+        opacity: 0;
+        animation: slideToLeftAndFadeIn 1s forwards;
+        overflow-x: hidden;
+    }
+    body { background: linear-gradient(to right, #867304, #bbff00, #9acf37); }
+    h2 { color: #8B4513; }
+    img { border: 5px solid #888; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+    ul li { margin-bottom: 10px; }
+    a { text-decoration: none; color: #007bff; }
+    a:hover { text-decoration: underline; }
+    .history-container {
+        margin: 20px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+    }
+    @keyframes slideToLeftAndFadeIn {
+        from { left: 50%; opacity: 0; }
+        to { left: 0; opacity: 1; }
+    }
+</style>
+</head>
+<body>
+<h2>KweKwek</h2>
+<img src="./img/kweek.jpg" style="width: 500px; height: 360px;" alt="Picture of eggieboy">
     <ul>
-        <li>top 3 <strong>most</strong> addicting filipino food of all time no cap</li>
-        <li>placeholder? no this food really is the bomb</li>
-        <li>dont believe me? try it out on your own, <a href="https://panlasangpinoy.com/pinoy-street-food-orange-egg-tokneneng-qwek-kwek-kwek-recipe/">here</a> are the ingredients because sharing is caring</li>
-    
+        <li>Quail eggs</li>
+        <li>Flour</li>
+        <li>Annatto powder or food coloring</li>
+        <li>Oil</li>
     </ul>
 
-
-
-    
-        <a href="../index.html"><h4>Back To Main Menu</h4></a>
-    
-
-    </body>
-
-
+    <strong>Steps:</strong>
+    <ol>
+        <li>Boil and peel eggs.</li>
+        <li>Mix flour and coloring.</li>
+        <li>Coat eggs with mixture.</li>
+        <li>Fry until golden.</li>
+    </ol>
+<div class="history-container">
+    <h3>History of KweKwek</h3>
+    <p>Kwek-kwek is a Filipino snack made of quail eggs that are coated in an orange-tinted batter and then deep-fried until crispy. They're usually served with a spicy vinegar sauce or a sweet, spicy sauce. Sometimes, they're also paired with other street foods like fish balls and squid balls.</p>
+</div>
+<a href="../index.html"><h4>Back To Main Menu</h4></a>
+</body>
 </html>
