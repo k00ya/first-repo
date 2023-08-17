@@ -14,12 +14,16 @@ display: flex;
 justify-content: center;
 align-items: center;
 min-height: 100vh;
-background: url('aabg.jpg') no-repeat;
+background: url('grave.jpg') no-repeat;
 background-size: cover;
 background-position: center;
 }
 
 .wrapper {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 width: 420px;
 background: transparent;
 border: 2px solid rgba(255, 255, 255, 0.2);
@@ -116,3 +120,67 @@ margin: 15px 0 15px;
 .register-link p a:hover {
     text-decoration: underline;
 }
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.firefly {
+    position: absolute;
+    width: 5px; /* Adjusted size */
+    height: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    animation: move 10s infinite, glow 1s infinite alternate;
+    /* Random starting positions */
+    top: calc(100% * var(--random-y));
+    left: calc(100% * var(--random-x));
+}
+
+/* We'll have individual animations for each firefly to ensure they move differently */
+@keyframes move {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateX(calc(200px * var(--random-x))) translateY(calc(200px * var(--random-y)));
+    }
+    50% {
+        transform: translateX(0) translateY(calc(400px * var(--random-y)));
+    }
+    75% {
+        transform: translateX(calc(400px * var(--random-x))) translateY(0);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 2px #fff;
+    }
+    100% {
+        box-shadow: 0 0 10px #fff, 0 0 15px #ff3, 0 0 20px #ff3;
+    }
+}
+
+#playMusicBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
